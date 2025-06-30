@@ -11,19 +11,19 @@ composer -V
 # Установка зависимостей
 composer install
 
+# Создание файла переменных окружения
+cp .env.example .env
+
 # Настройка подключения к базе данных в .env
-# DB_CONNECTION=pgsql
-# DB_HOST=localhost
-# DB_PORT=5432
-# DB_DATABASE=practike3
-# DB_USERNAME=postgres
-# DB_PASSWORD=postgres
 
 # Миграция базы данных
 php artisan migrate
 
 # Можно наполнить тестовыми данными
 php artisan db:seed
+
+# Сгенерировать ключ приложения
+php artisan key:generate
 
 # Запуск локального сервера
 php artisan serve
