@@ -4,16 +4,11 @@
 
 **Команды:**
 ```bash
-# Проверка установки PHP и Composer
-php -v
-composer -V
-
 # Установка зависимостей
 composer install
 
 # Создание файла переменных окружения
 cp .env.example .env
-
 # Настройка подключения к базе данных в .env
 
 # Миграция базы данных
@@ -25,11 +20,11 @@ php artisan db:seed
 # Сгенерировать ключ приложения
 php artisan key:generate
 
+# Сборка фронта
+npm install && npm run build
+
 # Запуск локального сервера
 php artisan serve
-
-# Может потребоваться создать манифест
-npm install && npm run build
 
 ```
 Роуты
